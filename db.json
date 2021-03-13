@@ -1,104 +1,108 @@
 {
-    "id": "f8d5466e-a44a-4355-89f6-18db06b4994d",
-    "name": "TEST Partner",
-    "status": "submitted",
-    "environment": null,
-    "tenantId": "db217fba-ff43-4e1b-8522-4d09693c6083",
-    "groupId": "610e72d9-c357-4723-98d6-1c923d49030c",
-    "profile": {
-        "transporTypes": [
-            "AS2"
-        ],
-        "messageTypes": [
-            "X12"
-        ],
-        "gateway": {
-            "isCertAuth": false,
-            "gatewayCertificate": null,
-            "aadInfo": {
-                "objectId": "o1",
-                "tenant": "t1",
-                "issuers": [
-                    "i1"
-                ]
-            },
-            "whitelistedIPs": [],
-            "isPartnerWhitelistedGatewayIP": false
-        },
-        "partnerEnvironment": {
-            "connectionType": "http",
-            "endPoint": "http://test.co.in",
-            "isAnonymousAuth": false,
-            "authType": {},
-            "isIntegrationIPsWhitelistedByPartner": false
-        },
-        "as2": {
-            "as2Identifier": "as2trst",
-            "as2Certificate": {
-                "filePath": "test",
-                "thumbprint": "2321342",
-                "expiry": "2022-12-12T00:00:00"
-            }
-        },
-        "x12": {
-            "hostTenantId": "1e7261ab-4016-43ce-bcd9-7c8ef64065fd",
-            "ediQualifier": "ZZ",
-            "ediIdentifier": "123123",
-            "groupEdiIdentifier": null
-        },
-        "edifact": {
-            "hostTenantId": "1e7261ab-4016-43ce-bcd9-7c8ef64065fd",
-            "ediQualifier": "ZZ",
-            "ediIdentifier": "123123",
-            "groupEdiIdentifier": null
-        },
-        "btf": {
-            "senderKey": "MS_TestPartner",
-            "senderXPath": null
-        },
-        "programs": [
-            {
-                "businessUnit": "EC",
-                "programName": "VL-SPLA",
-                "isValidated": false,
-                "transactions": [
+    "results": [
+        {
+            "id": "f8d5466e-a44a-4355-89f6-18db06b4994d",
+            "name": "TEST Partner",
+            "status": "submitted",
+            "environment": null,
+            "tenantId": "db217fba-ff43-4e1b-8522-4d09693c6083",
+            "groupId": "610e72d9-c357-4723-98d6-1c923d49030c",
+            "profile": {
+                "transporTypes": [
+                    "AS2"
+                ],
+                "messageTypes": [
+                    "X12"
+                ],
+                "gateway": {
+                    "isCertAuth": false,
+                    "gatewayCertificate": null,
+                    "aadInfo": {
+                        "objectId": "o1",
+                        "tenant": "t1",
+                        "issuers": [
+                            "i1"
+                        ]
+                    },
+                    "whitelistedIPs": [],
+                    "isPartnerWhitelistedGatewayIP": false
+                },
+                "partnerEnvironment": {
+                    "connectionType": "http",
+                    "endPoint": "http://test.co.in",
+                    "isAnonymousAuth": false,
+                    "authType": {},
+                    "isIntegrationIPsWhitelistedByPartner": false
+                },
+                "as2": {
+                    "as2Identifier": "as2trst",
+                    "as2Certificate": {
+                        "filePath": "test",
+                        "thumbprint": "2321342",
+                        "expiry": "2022-12-12T00:00:00"
+                    }
+                },
+                "x12": {
+                    "hostTenantId": "1e7261ab-4016-43ce-bcd9-7c8ef64065fd",
+                    "ediQualifier": "ZZ",
+                    "ediIdentifier": "123123",
+                    "groupEdiIdentifier": null
+                },
+                "edifact": {
+                    "hostTenantId": "1e7261ab-4016-43ce-bcd9-7c8ef64065fd",
+                    "ediQualifier": "ZZ",
+                    "ediIdentifier": "123123",
+                    "groupEdiIdentifier": null
+                },
+                "btf": {
+                    "senderKey": "MS_TestPartner",
+                    "senderXPath": null
+                },
+                "programs": [
                     {
-                        "direction": "Inbound",
-                        "ediType": "850",
-                        "isAck": false,
-                        "messageType": null,
-                        "name": "Order",
-                        "schemaId": null,
-                        "mapId": null,
-                        "flowContextId": null,
-                        "flowEndpointId": null,
-                        "partnerFlowContextId": null
+                        "businessUnit": "EC",
+                        "programName": "VL-SPLA",
+                        "isValidated": false,
+                        "transactions": [
+                            {
+                                "direction": "Inbound",
+                                "ediType": "850",
+                                "isAck": false,
+                                "messageType": null,
+                                "name": "Order",
+                                "schemaId": null,
+                                "mapId": null,
+                                "flowContextId": null,
+                                "flowEndpointId": null,
+                                "partnerFlowContextId": null
+                            }
+                        ],
+                        "addresses": [
+                            {
+                                "salesOrganization": "test",
+                                "soldTo": "123",
+                                "soldToGLN": "321",
+                                "billTo": "1232",
+                                "billToGLN": "12552",
+                                "shipTo": "1231",
+                                "shipToGLN": "1234"
+                            }
+                        ]
                     }
                 ],
-                "addresses": [
+                "contacts": [
                     {
-                        "salesOrganization": "test",
-                        "soldTo": "123",
-                        "soldToGLN": "321",
-                        "billTo": "1232",
-                        "billToGLN": "12552",
-                        "shipTo": "1231",
-                        "shipToGLN": "1234"
+                        "id": null,
+                        "name": "test",
+                        "email": "test@test.com",
+                        "company": "MSFT",
+                        "contactType": "notification",
+                        "role": "CitizenIntegration",
+                        "objectId": null,
+                        "isActive": false
                     }
                 ]
             }
-        ],
-        "contacts": [
-            {
-                "id": null,
-                "name": "test",
-                "email": "test@test.com",
-                "company": "MSFT",
-                "contactType": "notification",
-                "role": "CitizenIntegration",
-                "objectId": null,
-                "isActive": false
-            }
-        ]
-    }
+        }
+    ]
 }
